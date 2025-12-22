@@ -1,0 +1,54 @@
+BASE DE DATOS:
+
+
+cd ~/Escritorio/Plataforma_noName/backend
+
+sqlite3 usuarios.db
+
+
+.tables                -- muestra las tablas
+.schema usuarios       -- muestra la estructura de la tabla
+SELECT * FROM usuarios; -- lista todos los registros
+
+
+
+---------------------------------------------------
+
+PETICIONES CURL PARA CREAR, MODIFICAR Y/O BORRAR USERS:
+
+CREAR:
+
+curl -X POST http://localhost:3000/admin/create \
+-H "Content-Type: application/json" \
+-d '{"username":"maria","password":"clave123","role":"empresa"}' -------> roles "admin" "cliente" "empresa"
+
+BORRAR:
+
+curl -X POST http://localhost:3000/admin/delete \
+-H "Content-Type: application/json" \
+-d '{"username":"pedro"}'
+
+ACTUALIZAR CONTRASEÑA:
+
+curl -X POST http://localhost:3000/admin/update \
+-H "Content-Type: application/json" \
+-d '{"username":"juan","newPassword":"nuevaClave"}'
+
+
+NOTA PARA EL FUTURO: Buenas prácticas
+
+    Nunca mostrar contraseñas en texto plano.
+
+    Usar bcrypt siempre para guardar/actualizar contraseñas.
+
+    Proteger las rutas de admin: más adelante puedes añadir un middleware que solo permita acceso si el usuario logueado es admin.
+    
+    ______________________________________________________-
+    
+    users:
+    
+    USERNAME   |       pswd         |     rol
+    
+    admin             admin01             admin
+    empresa           empresa01           empresa
+    cliente           cliente01           cliente

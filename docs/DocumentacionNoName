@@ -1,0 +1,13 @@
+DOCUMENTACION APP SIN NOMBRE
+
+INICIO: http://localhost:3000/index.html
+
+------------------------------------------------------
+SERVER: INICIAR EN:
+
+cd ~/Escritorio/Plataforma_noName/backend
+node server.js
+
+
+-------------------------------------------------------
+
