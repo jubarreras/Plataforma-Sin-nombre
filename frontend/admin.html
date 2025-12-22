@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <!-- Botón de replegar -->
+      <button class="close-btn" onclick="toggleSidebar()">←</button>
+      <button onclick="verPerfil()">👤 Ver perfil</button>
+      <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+    </div>
+
+    <!-- Panel central -->
+    <div class="main">
+      <h1>Bienvenido <span id="username">Admin</span></h1>
+      <p>
+        Para continuar con la gestión de su evento debe completar los siguientes
+        pasos:
+      </p>
+
+      <div class="actions">
+        <button onclick="importarInvitados()">📥 Importar invitados</button>
+        <button onclick="generarFormulario()">
+          📝 Generar formulario de inscripción
+        </button>
+        <button onclick="enviarFormulario()">📤 Enviar formulario</button>
+      </div>
+    </div>
+
+    <script>
+      // Función para abrir/cerrar el menú lateral
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
+
+      // Funciones de botones
+      function verPerfil() {
+        alert("Aquí se mostraría la información del perfil del usuario.");
+      }
+
+      function cerrarSesion() {
+        window.location.href = "/index.html"; // redirige al login
+      }
+
+      function importarInvitados() {
+        alert("Función para importar invitados.");
+      }
+
+      function generarFormulario() {
+        alert("Función para generar formulario de inscripción.");
+      }
+
+      function enviarFormulario() {
+        alert("Función para enviar formulario.");
+      }
+    </script>
+  </body>
+</html>

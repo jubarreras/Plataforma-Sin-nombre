@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Empresa</title>
+  <link rel="stylesheet" href="empresa.css" />
+</head>
+<body>
+  <!-- Menú hamburguesa -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <!-- Botón de replegar -->
+    <button class="close-btn" onclick="toggleSidebar()">←</button>
+    <button onclick="verPerfil()">👤 Ver perfil</button>
+    <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+  </div>
+
+  <!-- Panel central -->
+  <div class="main">
+    <h1>Bienvenido <span id="username">Empresa</span></h1>
+
+    <!-- Botones principales alineados horizontalmente -->
+    <div class="actions">
+      <button onclick="agregarInvitado()">➕ Agregar invitado</button>
+      <button onclick="importarLista()">📥 Importar lista de invitados</button>
+    </div>
+
+    <!-- Tabla de invitados -->
+    <h2>Lista de invitados</h2>
+    <table class="invitados">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Estado</th>
+          <th>Cuenta creada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Vacío por ahora -->
+      </tbody>
+    </table>
+
+    <!-- Botón de reporte -->
+    <div class="reporte">
+      <button onclick="descargarReporte()">⬇️ Descargar reporte</button>
+    </div>
+  </div>
+
+  <script>
+    // Función para abrir/cerrar el menú lateral
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    // Funciones de botones
+    function verPerfil() {
+      alert("Aquí se mostraría la información del perfil del usuario.");
+    }
+
+    function cerrarSesion() {
+      window.location.href = "/index.html"; // redirige al login
+    }
+
+    function agregarInvitado() {
+      alert("Función para agregar invitado.");
+    }
+
+    function importarLista() {
+      alert("Función para importar lista de invitados.");
+    }
+
+    function descargarReporte() {
+      alert("Función para descargar reporte.");
+    }
+  </script>
+</body>
+</html>

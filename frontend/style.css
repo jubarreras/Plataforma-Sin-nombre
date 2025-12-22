@@ -1,0 +1,66 @@
+/* Importar fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; /* gris claro */
+}
+
+/* Panel lateral */
+.login-panel {
+    width: 30%;
+    height: 100vh;
+    background-color: #ffffff; /* recuadro blanco */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1); /* sombra ligera */
+    padding: 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Mensaje de bienvenida */
+.login-panel h2 {
+    font-weight: 700; /* negrita */
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Etiquetas */
+.login-panel label {
+    font-weight: 400; /* sin negrita */
+    margin-top: 15px;
+    color: #555555;
+}
+
+/* Campos de entrada */
+.login-panel input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botón */
+.login-panel button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background-color: #007bff; /* azul moderno */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.login-panel button:hover {
+    background-color: #0056b3; /* azul más oscuro al pasar el mouse */
+}
