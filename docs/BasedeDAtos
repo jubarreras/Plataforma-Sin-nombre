@@ -52,3 +52,22 @@ NOTA PARA EL FUTURO: Buenas prácticas
     admin             admin01             admin
     empresa           empresa01           empresa
     cliente           cliente01           cliente
+    
+    
+    
+    
+    ---------------------------------------------------------------------
+   
+   EVENTOS:
+   
+   INSERT INTO eventos (nombre, fecha, lugar, creado_por)
+VALUES ('Conferencia Tech 2026', '2026-03-15', 'Cali', 1);
+
+INSERT INTO eventos (nombre, fecha, lugar, creado_por)
+VALUES ('Expo Innovación Empresarial', '2026-05-20', 'Bogotá', 1);
+
+
+SELECT e.id, e.nombre, e.fecha, e.lugar, u.username
+FROM eventos e
+JOIN usuarios u ON e.creado_por = u.id;
+

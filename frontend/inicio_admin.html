@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio Admin</title>
+  <link rel="stylesheet" href="css/inicio_admin.css" />
+</head>
+<body>
+  <!-- Menú hamburguesa -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">←</button>
+    <button onclick="verPerfil()">👤 Ver perfil</button>
+    <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+  </div>
+
+  <!-- Panel central -->
+  <div class="main">
+    <h1>Bienvenido <span id="username">Admin</span></h1>
+    <p>Seleccione un evento existente o cree uno nuevo para continuar:</p>
+
+    <!-- Contenedor de eventos -->
+    <div id="eventos" class="eventos-lista"></div>
+
+    <!-- Botón crear evento -->
+    <div class="crear-evento">
+      <button id="btnCrearEvento" class="btn-crear">➕ Crear evento</button>
+    </div>
+  </div>
+
+  <!-- Modal crear evento -->
+  <div id="modalEvento" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModalEvento">×</span>
+      <h2>Crear nuevo evento</h2>
+      <form id="formEvento">
+        <div class="form-group">
+          <label for="nombre">Nombre del evento:</label>
+          <input type="text" id="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" required />
+        </div>
+        <div class="form-group">
+          <label for="lugar">Lugar:</label>
+          <input type="text" id="lugar" required />
+        </div>
+        <button type="submit" class="btn-crear">Guardar evento</button>
+      </form>
+      <p id="errorMsg" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Modal actualizar evento -->
+  <div id="modalUpdate" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeUpdate">×</span>
+      <h2>Actualizar evento</h2>
+      <form id="formUpdate">
+        <div class="form-group">
+          <label for="updateNombre">Nombre:</label>
+          <input type="text" id="updateNombre" required />
+        </div>
+        <div class="form-group">
+          <label for="updateFecha">Fecha:</label>
+          <input type="date" id="updateFecha" required />
+        </div>
+        <div class="form-group">
+          <label for="updateLugar">Lugar:</label>
+          <input type="text" id="updateLugar" required />
+        </div>
+        <button type="submit" class="btn-crear">Guardar cambios</button>
+      </form>
+      <p id="updateError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Modal borrar evento -->
+  <div id="modalDelete" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeDelete">×</span>
+      <h2>¿Seguro que quieres borrar este evento?</h2>
+      <button id="confirmDelete" class="btn-crear">Sí, borrar</button>
+      <button id="cancelDelete" class="btn-cancel">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="js/inicio_admin.js"></script>
+</body>
+</html>
+

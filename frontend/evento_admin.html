@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administración de Evento</title>
+  <link rel="stylesheet" href="css/evento_admin.css" />
+</head>
+<body>
+  <!-- Menú hamburguesa -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">←</button>
+    <button onclick="verPerfil()">👤 Ver perfil</button>
+    <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+  </div>
+
+  <!-- Panel principal -->
+  <div class="main">
+    <h1 id="nombreEvento">Administración del Evento</h1>
+
+    <!-- Contenedor de los recuadros -->
+    <div class="cards-container">
+      <div class="card">
+        <div class="icon">📥</div>
+        <h3>Gestión de evento</h3>
+        <p>Importar invitados, generar formulario y enviar.</p>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Lista de invitados</h3>
+        <p>Visualizar y editar invitados registrados.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔑</div>
+        <h3>Usuarios</h3>
+        <p>Crear y administrar accesos a la plataforma.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏢</div>
+        <h3>Espacios de reunión</h3>
+        <p>Administrar salas y espacios disponibles.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Agendas</h3>
+        <p>Consultar agendas de empresas y clientes.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Encuestas</h3>
+        <p>Generar encuestas de satisfacción.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✉️</div>
+        <h3>Correos masivos</h3>
+        <p>Enviar correos a todos los invitados.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/evento_admin.js"></script>
+</body>
+</html>
