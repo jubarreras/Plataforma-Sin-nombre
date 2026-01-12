@@ -1,0 +1,216 @@
+/* Tipografía general */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Menú hamburguesa */
+.hamburger {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #2c3e50; /* azul oscuro */
+  z-index: 1001;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50; /* azul oscuro */
+  color: white;
+  position: fixed;
+  left: -220px;
+  top: 0;
+  height: 100%;
+  transition: left 0.3s ease;
+  padding-top: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sidebar button:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Botón de cerrar sidebar */
+.close-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Panel central */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centrado vertical */
+  align-items: center;     /* centrado horizontal */
+  text-align: center;
+  padding: 20px;
+}
+
+.main h1 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.main p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Botones principales en vertical */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  margin: 10px 0;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db; /* azul */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* sombra */
+  transition: background 0.3s, transform 0.2s;
+  width: 220px;
+}
+
+.actions button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+/* Modal */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* fondo oscuro */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close-modal {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+.close-modal:hover {
+  color: #e74c3c;
+}
+
+.invitados {
+  width: 90%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.invitados thead {
+  background-color: #3498db;
+  color: white;
+}
+
+.invitados th, .invitados td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.invitados tbody tr:hover {
+  background-color: #f1f1f1;
+}
+/* Estilo base de botones */
+.btn {
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botón activo */
+.btn.activo {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn.activo:hover {
+  background-color: #2980b9;
+}
+
+/* Botón bloqueado */
+.btn.bloqueado {
+  background-color: #bdc3c7;
+  color: #7f8c8d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    left: -180px;
+  }
+
+  .actions button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+}
